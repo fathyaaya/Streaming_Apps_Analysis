@@ -24,7 +24,7 @@ vectorizer_n = pickle.load(open('vectorizer_netflix.pkl', 'rb'))
 x_pred_d = vectorizer_d.transform(x_d.values.astype('U')).toarray()
 y_pred_d = model_d.predict(x_pred_d)
 acc_d = accuracy_score(y_pred_d,y_d)
-acc_d = round((acc*100),2)
+acc_d = round((acc_d*100),2)
 
 df_n = pd.read_csv('netflix_testing.csv')
 df_n_l = pd.read_csv('netflix_testing_label.csv')
@@ -35,7 +35,7 @@ y_n = df_n_l['polarity']
 x_pred_n = vectorizer_n.transform(x_n.values.astype('U')).toarray()
 y_pred_n = model_n.predict(x_pred_n)
 acc_n = accuracy_score(y_pred_n,y_n)
-acc_n = round((acc*100),2)
+acc_n = round((acc_n*100),2)
 
 st.set_page_config(
     page_title = "Streaming Apps Review Sentiment Analysis", 
