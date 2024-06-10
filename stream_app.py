@@ -56,6 +56,7 @@ selected = option_menu(
 
 if selected == 'Informasi Aplikasi Netflix & Disney Hotstar':
     st.title('Informasi Aplikasi Netflix & Disney Hotstar')
+    st.markdown("""---""")
     st.subheader('Netflix', divider='rainbow')
     st.image('netflix.png')
     st.write('')
@@ -69,7 +70,7 @@ if selected == 'Informasi Aplikasi Netflix & Disney Hotstar':
 
 if selected == 'Perbandingan Performa Model':
     st.title('Perbandingan Model Sentiment Anaylsis')
-    st.write('')
+    st.subheader('', divider='rainbow')
     st.write('Pada penelitian ini penulis membuat model analisis sentimen yang dilatih dengan 2 dataset berdeda. Model ini dirancang untuk menganalisis sentimen dari ulasan pengguna aplikasi streaming Netflix dan Disney Hotstar. Dengan menggunakan model ini, pengguna dapat memahami apakah ulasan yang diberikan oleh pengguna lain bersifat positif atau negatif. Model analisis sentimen ini dibuat menggunakan algoritma Multinomial Naive Bayes, yang merupakan salah satu metode yang efektif dalam pengolahan teks dan analisis sentimen.')
     st.write('')
     st.subheader('**Perbedaan DataSet:**')
@@ -95,7 +96,7 @@ if selected == 'Perbandingan Performa Model':
 if selected == 'Model Analisa Sentimen Netflix':
     st.title('Netflix Apps Review Sentiment Analysis')
     st.write(f"**_Accuracy Model Analisa Sentimen Ulasan Aplikasi Netflix_** :  :green[**{acc_n}**]%")
-    st.markdown("""---""")
+    st.subheader('', divider='rainbow')
     st.title('Single-Predict Model Demo')
     coms = st.text_input('Masukan ulasan anda terhadap aplikasi Netflix')
 
@@ -173,9 +174,9 @@ if selected == 'Model Analisa Sentimen Netflix':
 if selected == 'Model Analisa Sentimen Disney':
     st.title('Disney Hotstar Apps Review Sentiment Analysis')
     st.write(f"**_Accuracy Model Analisa Sentimen Ulasan Aplikasi Disney Hotstar_** :  :green[**{acc_d}**]%")
-    st.markdown("""---""")
+    st.subheader('', divider='rainbow')
     st.title('Single-Predict Model Demo')
-    coms = st.text_input('Enter your review about the Astro app')
+    coms = st.text_input('Masukan ulasan anda terhadap aplikasi Disney')
 
     submit = st.button('Predict')
 
