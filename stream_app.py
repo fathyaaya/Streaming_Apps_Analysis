@@ -78,20 +78,30 @@ if selected == 'Perbandingan Performa Model':
     col1, col2 = st.columns(2)
     col1.image('netflix_distri.png',caption="Distribusi dataset Netflix", use_column_width=True)
     col2.image('disney_distri.png',caption="Distribusi dataset Disney Hotstar", use_column_width=True)
-    st.write('Pada Gambar di atas memperlihatkan dataset yang berisi ulasan aplikasi Astro dari user sejumlah 733 ulasan terbagi menjadi 81 ulasan negatif dan 652 ulasan positif. Data ini nantinya akan dipisah menjadi data latih dan data uji. Pada penelitian ini dataset akan dipecah dalam bentuk 90% data latih dan 10% data uji.')
+    st.write('Di atas memperlihatkan dua gambar distribusi dataset. pada gambar bagian kiri memperlihatkan distribusi ulasan pada aplikasi Netflix dimana terdapat 150 ulasan positif dan 220 ulasan negatif dari total 370 ulasan dari user. Sedangkan pada gambar bagian kanan memperlihatkan distribusi ulasan pada aplikasi Disney Hotstar dimana terdapat 114 ulasan positif dan 258 ulasan negatif dari total 372 ulasan dari user. masing-masing total ulasan ini nantinya akan dipisah menjadi 90% data latih dan 10% data uji.')
     st.write('')
     st.subheader('**Hasil Uji:**')
     col1, col2 = st.columns(2)
     col1.image('pie_netflix.png',caption="Hasil Pengujian Model Ulasan Netflix", use_column_width=True)
     col2.image('pie_disney.png',caption="Hasil Pengujian Model Ulasan Disney Hotstar",use_column_width=True)
     st.write('')
-    st.write('Dari 74 ulasan yang termasuk dalam data uji, model ini memprediksi bahwa 2 ulasan memiliki sentimen negatif dan 72 ulasan memiliki sentimen positif. Deskripsi ini menggambarkan kemampuan model dalam mengkategorikan sentimen ulasan pengguna dengan cukup baik.')
+    st.write('Gambar di atas merupakan gambar grafik hasil prediksi yang dilakukan oleh model sentiment analisis yang telah dibuat. Pada model analisis ulasan aplikasi Netflix sejumlah 19 ulasan diprediksi sebagai sentiment negatif dan 18 ulasan diprediksi sebagai sentiment positif. Sedangkan pada model analisis ulasan aplikasi Disney Hotstar sejumlah 30 ulasan diprediksi sebagai ulasan negatif dan 8 ulasan diprediksi sebagai sentiment positif.')
     st.subheader('**Confusion Matrix:**')
     col1, col2 = st.columns(2)
     col1.image('cm_netflix.png',caption="Confusion Matrix Model Ulasan Netflix", use_column_width=True)
     col2.image('cm_disney.png',caption="Confusion Matrix Model Ulasan Disney Hotstar", use_column_width=True)
     st.write('')
-    st.write('bla bla bla bla bla')
+    st.write('Diatas ini merupakan 2 gambar confusion matrix yang didapat dari hasil evaluasi kedua model yang telah dibuat. Sehingga penulis dapat mengetahui performa masing-masing model sebagai berikut:')
+    st.write('**Model Analisis Sentimen Aplikasi Netflix:**')
+    lst = ['Precision: 94%','Recall: 85%','Accuracy: 89%']
+    s = ''
+    for i in lst:
+        s += "- " + i + "\n"
+    st.write('**Model Analisis Sentimen Aplikasi Disney Hotstar:**')
+    lst = ['Precision: 100%','Recall: 62%','Accuracy: 87%']
+    s = ''
+    for i in lst:
+        s += "- " + i + "\n"
 
 if selected == 'Model Analisa Sentimen Netflix':
     st.title('Netflix Apps Review Sentiment Analysis')
