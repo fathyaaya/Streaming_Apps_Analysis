@@ -97,11 +97,13 @@ if selected == 'Perbandingan Performa Model':
     s = ''
     for i in lst:
         s += "- " + i + "\n"
+    st.markdown(s)
     st.write('**Model Analisis Sentimen Aplikasi Disney Hotstar:**')
     lst = ['Precision: 100%','Recall: 62%','Accuracy: 87%']
     s = ''
     for i in lst:
         s += "- " + i + "\n"
+    st.markdown(s)
 
 if selected == 'Model Analisa Sentimen Netflix':
     st.title('Netflix Apps Review Sentiment Analysis')
