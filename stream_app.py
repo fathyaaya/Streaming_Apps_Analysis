@@ -134,7 +134,7 @@ if selected == 'Model Analisa Sentimen Netflix':
 
     if file_uploaded:
         uploaded_df = pd.read_csv(file_uploaded)
-        conv_df = vectorizer_n.transform(uploaded_df['clean_review'].values.astype('U')).toarray()
+        conv_df = vectorizer_n.transform(uploaded_df['stem_review'].values.astype('U')).toarray()
         prediction_arr = model_n.predict(conv_df)
 
         bar = st.progress(0)
