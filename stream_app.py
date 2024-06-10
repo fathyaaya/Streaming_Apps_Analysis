@@ -21,8 +21,8 @@ vectorizer_d = pickle.load(open('vectorizer_disney.pkl', 'rb'))
 model_n = pickle.load(open('sentiment_netflix.pkl', 'rb'))
 vectorizer_n = pickle.load(open('vectorizer_netflix.pkl', 'rb'))
 
-x_pred_d = vectorizer.transform(x_d.values.astype('U')).toarray()
-y_pred_d = model.predict(x_pred_d)
+x_pred_d = vectorizer_d.transform(x_d.values.astype('U')).toarray()
+y_pred_d = model_d.predict(x_pred_d)
 acc_d = accuracy_score(y_pred_d,y_d)
 acc_d = round((acc*100),2)
 
@@ -32,8 +32,8 @@ df_n_l = pd.read_csv('netflix_testing_label.csv')
 x_n = df_n['stem_review']
 y_n = df_n_l['polarity']
 
-x_pred_n = vectorizer.transform(x_n.values.astype('U')).toarray()
-y_pred_n = monel.predict(x_pred_n)
+x_pred_n = vectorizer_n.transform(x_n.values.astype('U')).toarray()
+y_pred_n = model_n.predict(x_pred_n)
 acc_n = accuracy_score(y_pred_n,y_n)
 acc_n = round((acc*100),2)
 
