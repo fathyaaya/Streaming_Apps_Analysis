@@ -85,7 +85,7 @@ if selected == 'Perbandingan Performa Model':
     col1.image('pie_netflix.png',caption="Hasil Pengujian Model Ulasan Netflix", use_column_width=True)
     col2.image('pie_disney.png',caption="Hasil Pengujian Model Ulasan Disney Hotstar",use_column_width=True)
     st.write('')
-    st.write('Gambar di atas merupakan gambar grafik hasil prediksi yang dilakukan oleh model sentiment analisis yang telah dibuat. Pada model analisis ulasan aplikasi Netflix sejumlah 19 ulasan diprediksi sebagai sentiment negatif dan 18 ulasan diprediksi sebagai sentiment positif. Sedangkan pada model analisis ulasan aplikasi Disney Hotstar sejumlah 30 ulasan diprediksi sebagai ulasan negatif dan 8 ulasan diprediksi sebagai sentiment positif.')
+    st.write('Gambar di atas merupakan gambar grafik hasil prediksi yang dilakukan oleh model sentiment analisis yang telah dibuat. Pada model analisis ulasan aplikasi Netflix sejumlah 23 ulasan diprediksi sebagai sentiment negatif dan 14 ulasan diprediksi sebagai sentiment positif. Sedangkan pada model analisis ulasan aplikasi Disney Hotstar sejumlah 34 ulasan diprediksi sebagai ulasan negatif dan 4 ulasan diprediksi sebagai sentiment positif.')
     st.subheader('**Confusion Matrix:**')
     col1, col2 = st.columns(2)
     col1.image('cm_netflix.png',caption="Confusion Matrix Model Ulasan Netflix", use_column_width=True)
@@ -93,13 +93,13 @@ if selected == 'Perbandingan Performa Model':
     st.write('')
     st.write('Diatas ini merupakan 2 gambar confusion matrix yang didapat dari hasil evaluasi kedua model yang telah dibuat. Sehingga penulis dapat mengetahui performa masing-masing model sebagai berikut:')
     st.write('**Model Analisis Sentimen Aplikasi Netflix:**')
-    lst = ['Precision: 94%','Recall: 85%','Accuracy: 89%']
+    lst = ['Precision: 100%','Recall: 78%','Accuracy: 89%']
     s = ''
     for i in lst:
         s += "- " + i + "\n"
     st.markdown(s)
     st.write('**Model Analisis Sentimen Aplikasi Disney Hotstar:**')
-    lst = ['Precision: 100%','Recall: 62%','Accuracy: 87%']
+    lst = ['Precision: 100%','Recall: 44%','Accuracy: 87%']
     s = ''
     for i in lst:
         s += "- " + i + "\n"
