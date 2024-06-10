@@ -39,7 +39,7 @@ acc_n = round((acc_n*100),2)
 
 st.set_page_config(
     page_title = "Streaming Apps Review Sentiment Analysis", 
-    page_icon = "🛍"
+    page_icon = "📺"
 )
 
 #st.title('Astro Apps Review Sentiment Analysis')
@@ -117,9 +117,9 @@ if selected == 'Model Analisa Sentimen Netflix':
 
         print(prediction[0])
         if prediction[0] == 1:
-            st.success("😆 Sentimen review anda positif")
+            st.success("👍 Sentimen review anda positif")
         else:
-            st.error("🤬 Sentimen review anda negatif")
+            st.error("👎 Sentimen review anda negatif")
     
     st.markdown("""---""")
     st.title('Multi-Predict Model Demo')
@@ -195,9 +195,9 @@ if selected == 'Model Analisa Sentimen Disney':
 
         print(prediction[0])
         if prediction[0] == 1:
-            st.success("😆 Sentimen review anda positif")
+            st.success("👍 Sentimen review anda positif")
         else:
-            st.error("🤬 Sentimen review anda negatif")
+            st.error("👎 Sentimen review anda negatif")
     
     st.markdown("""---""")
     st.title('Multi-Predict Model Demo')
