@@ -44,10 +44,9 @@ st.set_page_config(
 
 #st.title('Astro Apps Review Sentiment Analysis')
 selected = option_menu(
-        menu_title = "None",
+        menu_title = None,
         options = ['Informasi Aplikasi Netflix & Disney Hotstar','Perbandingan Performa Model','Model Analisa Sentimen Netflix','Model Analisa Sentimen Disney'],
         icons = ['basket-fill','box-fill','input-cursor-text','table'],
-        menu_icon ='segmented-nav',
         default_index = 0,
         orientation = 'horizontal',
         styles={
