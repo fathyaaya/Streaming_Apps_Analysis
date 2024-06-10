@@ -46,11 +46,11 @@ st.set_page_config(
 selected = option_menu(
         menu_title = None,
         options = ['Informasi Aplikasi Netflix & Disney Hotstar','Perbandingan Performa Model','Model Analisa Sentimen Netflix','Model Analisa Sentimen Disney'],
-        icons = ['basket-fill','box-fill','input-cursor-text','table'],
+        icons = ['tv','plus-slash-minus','camera-reels','cast'],
         default_index = 0,
         orientation = 'horizontal',
         styles={
-            "nav-link-selected":{"background-color":"#260b7d"},
+            "nav-link-selected":{"background-color":"#E50914"},
         },
     )
 
