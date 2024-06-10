@@ -123,7 +123,7 @@ if selected == 'Model Analisa Sentimen Netflix':
     
     st.markdown("""---""")
     st.title('Multi-Predict Model Demo')
-    sample_csv = df_n.iloc[:5, :-1].to_csv(index=False).encode('utf-8')
+    sample_csv = df_n.iloc[:5].to_csv(index=False).encode('utf-8')
 
     st.write("")
     st.download_button("Download CSV Example", data=sample_csv, file_name='sample_review.csv', mime='text/csv')
@@ -201,7 +201,7 @@ if selected == 'Model Analisa Sentimen Disney':
     
     st.markdown("""---""")
     st.title('Multi-Predict Model Demo')
-    sample_csv = df_d.iloc[:5, :-1].to_csv(index=False).encode('utf-8')
+    sample_csv = df_d.iloc[:5].to_csv(index=False).encode('utf-8')
 
     st.write("")
     st.download_button("Download CSV Example", data=sample_csv, file_name='sample_review.csv', mime='text/csv')
