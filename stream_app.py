@@ -45,8 +45,8 @@ st.set_page_config(
 #st.title('Astro Apps Review Sentiment Analysis')
 selected = option_menu(
         menu_title = None,
-        options = ['Informasi Aplikasi Netflix & Disney Hotstar','Perbandingan Performa Model','Model Analisa Sentimen Netflix','Model Analisa Sentimen Disney'],
-        icons = ['tv','plus-slash-minus','camera-reels','cast'],
+        options = ['Informasi Aplikasi Netflix & Disney Hotstar','Model Analisa Sentimen Netflix','Model Analisa Sentimen Disney'],
+        icons = ['tv','camera-reels','cast'],
         default_index = 0,
         orientation = 'horizontal',
         styles={
@@ -68,42 +68,42 @@ if selected == 'Informasi Aplikasi Netflix & Disney Hotstar':
     st.write('')
     st.write('Disney+ Hotstar (dikenal sebagai Hotstar di Singapura, Kanada dan Britania Raya) adalah layanan streaming video over-the-top asal India yang dimiliki oleh Disney Star, sebuah anak perusahaan dari The Walt Disney Company.[1] Sebelumnya layanan ini diluncurkan sebagai Hotstar, sebelum diakusisi oleh layanan Disney+ pada April 2020.[2] Pada Februari 2020, setelah pembelian perusahaan induk Star India, 21st Century Fox, oleh Disney pada 2019, Disney mengumumkan rencana integrasi layanan video sesuai permintaan Disney+ dengan Hotstar pada April 2020 untuk memanfaatkan infrastruktur dan pengguna Hotstar. Pada 3 April 2020, platform Hotstar resmi digabungkan dengan Disney+.')
 
-if selected == 'Perbandingan Performa Model':
-    st.title('Perbandingan Model Sentiment Anaylsis')
-    st.subheader('', divider='rainbow')
-    st.write('Pada penelitian ini penulis membuat model analisis sentimen yang dilatih dengan 2 dataset berdeda. Model ini dirancang untuk menganalisis sentimen dari ulasan pengguna aplikasi streaming Netflix dan Disney Hotstar. Dengan menggunakan model ini, pengguna dapat memahami apakah ulasan yang diberikan oleh pengguna lain bersifat positif atau negatif. Model analisis sentimen ini dibuat menggunakan algoritma Multinomial Naive Bayes, yang merupakan salah satu metode yang efektif dalam pengolahan teks dan analisis sentimen.')
-    st.write('')
-    st.subheader('**Perbedaan DataSet:**')
-    st.write('Dataset yang digunakan untuk melatih model ini adalah data ulasan aplikasi dari kedua aplikasi yang diambil langsung dari Google Playstore. Data ini mencakup berbagai ulasan dari pengguna, yang kemudian diproses dan dianalisis untuk membangun model yang akurat dan andal.')
-    col1, col2 = st.columns(2)
-    col1.image('netflix_distri.png',caption="Distribusi dataset Netflix", use_column_width=True)
-    col2.image('disney_distri.png',caption="Distribusi dataset Disney Hotstar", use_column_width=True)
-    st.write('Di atas memperlihatkan dua gambar distribusi dataset. pada gambar bagian kiri memperlihatkan distribusi ulasan pada aplikasi Netflix dimana terdapat 150 ulasan positif dan 220 ulasan negatif dari total 370 ulasan dari user. Sedangkan pada gambar bagian kanan memperlihatkan distribusi ulasan pada aplikasi Disney Hotstar dimana terdapat 114 ulasan positif dan 258 ulasan negatif dari total 372 ulasan dari user. masing-masing total ulasan ini nantinya akan dipisah menjadi 90% data latih dan 10% data uji.')
-    st.write('')
-    st.subheader('**Hasil Uji:**')
-    col1, col2 = st.columns(2)
-    col1.image('pie_netflix.png',caption="Hasil Pengujian Model Ulasan Netflix", use_column_width=True)
-    col2.image('pie_disney.png',caption="Hasil Pengujian Model Ulasan Disney Hotstar",use_column_width=True)
-    st.write('')
-    st.write('Gambar di atas merupakan gambar grafik hasil prediksi yang dilakukan oleh model sentiment analisis yang telah dibuat. Pada model analisis ulasan aplikasi Netflix sejumlah 23 ulasan diprediksi sebagai sentiment negatif dan 14 ulasan diprediksi sebagai sentiment positif. Sedangkan pada model analisis ulasan aplikasi Disney Hotstar sejumlah 34 ulasan diprediksi sebagai ulasan negatif dan 4 ulasan diprediksi sebagai sentiment positif.')
-    st.subheader('**Confusion Matrix:**')
-    col1, col2 = st.columns(2)
-    col1.image('cm_netflix.png',caption="Confusion Matrix Model Ulasan Netflix", use_column_width=True)
-    col2.image('cm_disney.png',caption="Confusion Matrix Model Ulasan Disney Hotstar", use_column_width=True)
-    st.write('')
-    st.write('Diatas ini merupakan 2 gambar confusion matrix yang didapat dari hasil evaluasi kedua model yang telah dibuat. Sehingga penulis dapat mengetahui performa masing-masing model sebagai berikut:')
-    st.write('**Model Analisis Sentimen Aplikasi Netflix:**')
-    lst = ['Precision: 100%','Recall: 78%','Accuracy: 89%']
-    s = ''
-    for i in lst:
-        s += "- " + i + "\n"
-    st.markdown(s)
-    st.write('**Model Analisis Sentimen Aplikasi Disney Hotstar:**')
-    lst = ['Precision: 100%','Recall: 44%','Accuracy: 87%']
-    s = ''
-    for i in lst:
-        s += "- " + i + "\n"
-    st.markdown(s)
+# if selected == 'Perbandingan Performa Model':
+#     st.title('Perbandingan Model Sentiment Anaylsis')
+#     st.subheader('', divider='rainbow')
+#     st.write('Pada penelitian ini penulis membuat model analisis sentimen yang dilatih dengan 2 dataset berdeda. Model ini dirancang untuk menganalisis sentimen dari ulasan pengguna aplikasi streaming Netflix dan Disney Hotstar. Dengan menggunakan model ini, pengguna dapat memahami apakah ulasan yang diberikan oleh pengguna lain bersifat positif atau negatif. Model analisis sentimen ini dibuat menggunakan algoritma Multinomial Naive Bayes, yang merupakan salah satu metode yang efektif dalam pengolahan teks dan analisis sentimen.')
+#     st.write('')
+#     st.subheader('**Perbedaan DataSet:**')
+#     st.write('Dataset yang digunakan untuk melatih model ini adalah data ulasan aplikasi dari kedua aplikasi yang diambil langsung dari Google Playstore. Data ini mencakup berbagai ulasan dari pengguna, yang kemudian diproses dan dianalisis untuk membangun model yang akurat dan andal.')
+#     col1, col2 = st.columns(2)
+#     col1.image('netflix_distri.png',caption="Distribusi dataset Netflix", use_column_width=True)
+#     col2.image('disney_distri.png',caption="Distribusi dataset Disney Hotstar", use_column_width=True)
+#     st.write('Di atas memperlihatkan dua gambar distribusi dataset. pada gambar bagian kiri memperlihatkan distribusi ulasan pada aplikasi Netflix dimana terdapat 150 ulasan positif dan 220 ulasan negatif dari total 370 ulasan dari user. Sedangkan pada gambar bagian kanan memperlihatkan distribusi ulasan pada aplikasi Disney Hotstar dimana terdapat 114 ulasan positif dan 258 ulasan negatif dari total 372 ulasan dari user. masing-masing total ulasan ini nantinya akan dipisah menjadi 90% data latih dan 10% data uji.')
+#     st.write('')
+#     st.subheader('**Hasil Uji:**')
+#     col1, col2 = st.columns(2)
+#     col1.image('pie_netflix.png',caption="Hasil Pengujian Model Ulasan Netflix", use_column_width=True)
+#     col2.image('pie_disney.png',caption="Hasil Pengujian Model Ulasan Disney Hotstar",use_column_width=True)
+#     st.write('')
+#     st.write('Gambar di atas merupakan gambar grafik hasil prediksi yang dilakukan oleh model sentiment analisis yang telah dibuat. Pada model analisis ulasan aplikasi Netflix sejumlah 23 ulasan diprediksi sebagai sentiment negatif dan 14 ulasan diprediksi sebagai sentiment positif. Sedangkan pada model analisis ulasan aplikasi Disney Hotstar sejumlah 34 ulasan diprediksi sebagai ulasan negatif dan 4 ulasan diprediksi sebagai sentiment positif.')
+#     st.subheader('**Confusion Matrix:**')
+#     col1, col2 = st.columns(2)
+#     col1.image('cm_netflix.png',caption="Confusion Matrix Model Ulasan Netflix", use_column_width=True)
+#     col2.image('cm_disney.png',caption="Confusion Matrix Model Ulasan Disney Hotstar", use_column_width=True)
+#     st.write('')
+#     st.write('Diatas ini merupakan 2 gambar confusion matrix yang didapat dari hasil evaluasi kedua model yang telah dibuat. Sehingga penulis dapat mengetahui performa masing-masing model sebagai berikut:')
+#     st.write('**Model Analisis Sentimen Aplikasi Netflix:**')
+#     lst = ['Precision: 100%','Recall: 78%','Accuracy: 89%']
+#     s = ''
+#     for i in lst:
+#         s += "- " + i + "\n"
+#     st.markdown(s)
+#     st.write('**Model Analisis Sentimen Aplikasi Disney Hotstar:**')
+#     lst = ['Precision: 100%','Recall: 44%','Accuracy: 87%']
+#     s = ''
+#     for i in lst:
+#         s += "- " + i + "\n"
+#     st.markdown(s)
 
 if selected == 'Model Analisa Sentimen Netflix':
     st.title('Netflix Apps Review Sentiment Analysis')
@@ -134,55 +134,55 @@ if selected == 'Model Analisa Sentimen Netflix':
             st.error("👎 Sentimen review anda negatif")
     
     st.markdown("""---""")
-    st.title('Multi-Predict Model Demo')
-    sample_csv = df_n.iloc[:5].to_csv(index=False).encode('utf-8')
+    # st.title('Multi-Predict Model Demo')
+    # sample_csv = df_n.iloc[:5].to_csv(index=False).encode('utf-8')
 
-    st.write("")
-    st.download_button("Download CSV Example", data=sample_csv, file_name='sample_review.csv', mime='text/csv')
+    # st.write("")
+    # st.download_button("Download CSV Example", data=sample_csv, file_name='sample_review.csv', mime='text/csv')
 
-    st.write("")
-    st.write("")
-    file_uploaded = st.file_uploader("Upload a CSV file", type='csv')
+    # st.write("")
+    # st.write("")
+    # file_uploaded = st.file_uploader("Upload a CSV file", type='csv')
 
-    if file_uploaded:
-        uploaded_df = pd.read_csv(file_uploaded)
-        conv_df = vectorizer_n.transform(uploaded_df['stem_review'].values.astype('U')).toarray()
-        prediction_arr = model_n.predict(conv_df)
+    # if file_uploaded:
+    #     uploaded_df = pd.read_csv(file_uploaded)
+    #     conv_df = vectorizer_n.transform(uploaded_df['stem_review'].values.astype('U')).toarray()
+    #     prediction_arr = model_n.predict(conv_df)
 
-        bar = st.progress(0)
-        status_text = st.empty()
+    #     bar = st.progress(0)
+    #     status_text = st.empty()
 
-        for i in range(1, 70):
-            status_text.text(f"{i}% complete")
-            bar.progress(i)
-            time.sleep(0.01)
+    #     for i in range(1, 70):
+    #         status_text.text(f"{i}% complete")
+    #         bar.progress(i)
+    #         time.sleep(0.01)
 
-        result_arr = []
+    #     result_arr = []
 
-        for prediction in prediction_arr:
-            if prediction == 1:
-                result = "Sentimen positif"
-            else:
-                result = "Sentimen Negatif"
-            result_arr.append(result)
+    #     for prediction in prediction_arr:
+    #         if prediction == 1:
+    #             result = "Sentimen positif"
+    #         else:
+    #             result = "Sentimen Negatif"
+    #         result_arr.append(result)
 
-        uploaded_result = pd.DataFrame({'Prediction Result': result_arr})
+    #     uploaded_result = pd.DataFrame({'Prediction Result': result_arr})
 
-        for i in range(70, 101):
-            status_text.text(f"{i}% complete")
-            bar.progress(i)
-            time.sleep(0.01)
-            if i == 100:
-                time.sleep(1)
-                status_text.empty()
-                bar.empty()
+    #     for i in range(70, 101):
+    #         status_text.text(f"{i}% complete")
+    #         bar.progress(i)
+    #         time.sleep(0.01)
+    #         if i == 100:
+    #             time.sleep(1)
+    #             status_text.empty()
+    #             bar.empty()
 
-        col1, col2 = st.columns([1, 2])
+    #     col1, col2 = st.columns([1, 2])
 
-        with col1:
-            st.dataframe(uploaded_result)
-        with col2:
-            st.dataframe(uploaded_df)
+    #     with col1:
+    #         st.dataframe(uploaded_result)
+    #     with col2:
+    #         st.dataframe(uploaded_df)
 if selected == 'Model Analisa Sentimen Disney':
     st.title('Disney Hotstar Apps Review Sentiment Analysis')
     st.write(f"**_Accuracy Model Analisa Sentimen Ulasan Aplikasi Disney Hotstar_** :  :green[**{acc_d}**]%")
@@ -212,52 +212,52 @@ if selected == 'Model Analisa Sentimen Disney':
             st.error("👎 Sentimen review anda negatif")
     
     st.markdown("""---""")
-    st.title('Multi-Predict Model Demo')
-    sample_csv = df_d.iloc[:5].to_csv(index=False).encode('utf-8')
+    # st.title('Multi-Predict Model Demo')
+    # sample_csv = df_d.iloc[:5].to_csv(index=False).encode('utf-8')
 
-    st.write("")
-    st.download_button("Download CSV Example", data=sample_csv, file_name='sample_review.csv', mime='text/csv')
+    # st.write("")
+    # st.download_button("Download CSV Example", data=sample_csv, file_name='sample_review.csv', mime='text/csv')
 
-    st.write("")
-    st.write("")
-    file_uploaded = st.file_uploader("Upload a CSV file", type='csv')
+    # st.write("")
+    # st.write("")
+    # file_uploaded = st.file_uploader("Upload a CSV file", type='csv')
 
-    if file_uploaded:
-        uploaded_df = pd.read_csv(file_uploaded)
-        conv_df = vectorizer_d.transform(uploaded_df['stem_review'].values.astype('U')).toarray()
-        prediction_arr = model_d.predict(conv_df)
+    # if file_uploaded:
+    #     uploaded_df = pd.read_csv(file_uploaded)
+    #     conv_df = vectorizer_d.transform(uploaded_df['stem_review'].values.astype('U')).toarray()
+    #     prediction_arr = model_d.predict(conv_df)
 
-        bar = st.progress(0)
-        status_text = st.empty()
+    #     bar = st.progress(0)
+    #     status_text = st.empty()
 
-        for i in range(1, 70):
-            status_text.text(f"{i}% complete")
-            bar.progress(i)
-            time.sleep(0.01)
+    #     for i in range(1, 70):
+    #         status_text.text(f"{i}% complete")
+    #         bar.progress(i)
+    #         time.sleep(0.01)
 
-        result_arr = []
+    #     result_arr = []
 
-        for prediction in prediction_arr:
-            if prediction == 1:
-                result = "Sentimen positif"
-            else:
-                result = "Sentimen Negatif"
-            result_arr.append(result)
+    #     for prediction in prediction_arr:
+    #         if prediction == 1:
+    #             result = "Sentimen positif"
+    #         else:
+    #             result = "Sentimen Negatif"
+    #         result_arr.append(result)
 
-        uploaded_result = pd.DataFrame({'Prediction Result': result_arr})
+    #     uploaded_result = pd.DataFrame({'Prediction Result': result_arr})
 
-        for i in range(70, 101):
-            status_text.text(f"{i}% complete")
-            bar.progress(i)
-            time.sleep(0.01)
-            if i == 100:
-                time.sleep(1)
-                status_text.empty()
-                bar.empty()
+    #     for i in range(70, 101):
+    #         status_text.text(f"{i}% complete")
+    #         bar.progress(i)
+    #         time.sleep(0.01)
+    #         if i == 100:
+    #             time.sleep(1)
+    #             status_text.empty()
+    #             bar.empty()
 
-        col1, col2 = st.columns([1, 2])
+    #     col1, col2 = st.columns([1, 2])
 
-        with col1:
-            st.dataframe(uploaded_result)
-        with col2:
-            st.dataframe(uploaded_df)
+    #     with col1:
+    #         st.dataframe(uploaded_result)
+    #     with col2:
+    #         st.dataframe(uploaded_df)
