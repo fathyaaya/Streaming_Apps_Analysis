@@ -42,7 +42,6 @@ st.set_page_config(
     page_icon = "📺"
 )
 
-#st.title('Astro Apps Review Sentiment Analysis')
 selected = option_menu(
         menu_title = None,
         options = ['Informasi Aplikasi Netflix & Disney Hotstar','Model Analisa Sentimen Netflix','Model Analisa Sentimen Disney'],
